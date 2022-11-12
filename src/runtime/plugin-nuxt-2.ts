@@ -1,4 +1,4 @@
-import { MetrikaModuleParams } from './type'
+import type { MetrikaModuleParams } from './type'
 
 export default (ctx: any, inject: any) => {
   const config: MetrikaModuleParams = ctx.$config.yandexMetrika
@@ -8,6 +8,6 @@ export default (ctx: any, inject: any) => {
     },
     reachGoal: (identifyer: string) => {
       window.ym(config.id, 'reachGoal', identifyer)
-    }
+    },
   })
 }

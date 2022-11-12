@@ -1,8 +1,7 @@
-// @ts-ignore
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin((ctx) => {
-  let id: string = useRuntimeConfig().public.yandexMetrika.id
+  const id: string = useRuntimeConfig().public.yandexMetrika.id
 
   ctx.provide('metrika', {
     hit: (url: string) => {

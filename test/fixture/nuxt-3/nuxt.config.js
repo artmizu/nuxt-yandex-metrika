@@ -1,7 +1,7 @@
 import YandeMetrikaModule from '../../../src/module'
 
-export default defineNuxtConfig({
+export default {
   modules: [
-    YandeMetrikaModule
+    YandeMetrikaModule,
   ],
-})
+}

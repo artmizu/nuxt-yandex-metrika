@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from 'vitest'
-import { setup, $fetch, createPage, useTestContext } from '@nuxt/test-utils'
+import { describe, expect, it, vi } from 'vitest'
+import { $fetch, createPage, setup, useTestContext } from '@nuxt/test-utils'
 
 describe('module tests', async () => {
   await setup({
@@ -16,9 +16,9 @@ describe('module tests', async () => {
           accurateTrackBounce: false,
           webvisor: false,
           ecommerce: false,
-        }
-      }
-    }
+        },
+      },
+    },
   })
 
   it('script tag is injected with propper arguments', async () => {

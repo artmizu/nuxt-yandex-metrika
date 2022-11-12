@@ -1,10 +1,10 @@
 import { resolve } from 'path'
 import { defu } from 'defu'
-import { defineNuxtModule, addPlugin, createResolver, isNuxt2 } from '@nuxt/kit'
+import { addPlugin, createResolver, defineNuxtModule, isNuxt2 } from '@nuxt/kit'
 import type { Nuxt } from '@nuxt/schema'
-import { name, version } from '../package.json'
-import { MetrikaModuleParams } from './runtime/type'
 import consola from 'consola'
+import { name, version } from '../package.json'
+import type { MetrikaModuleParams } from './runtime/type'
 
 export interface ModuleOptions extends MetrikaModuleParams { }
 export interface ModulePublicRuntimeConfig extends MetrikaModuleParams { }
@@ -17,7 +17,7 @@ const module = defineNuxtModule<Partial<MetrikaModuleParams>>({
     configKey: 'yandexMetrika',
     compatibility: {
       nuxt: '^2.0.0 || ^3.0.0-rc.5',
-    }
+    },
   },
   defaults: {
     noscript: true,
@@ -30,7 +30,7 @@ const module = defineNuxtModule<Partial<MetrikaModuleParams>>({
       accurateTrackBounce: true,
       webvisor: true,
       ecommerce: true,
-    }
+    },
   },
   async setup(options, nuxt) {
     let moduleOptions: MetrikaModuleParams
@@ -41,7 +41,8 @@ const module = defineNuxtModule<Partial<MetrikaModuleParams>>({
         options,
       )
       nuxt.options.publicRuntimeConfig.yandexMetrika = moduleOptions
-    } else {
+    }
+    else {
       moduleOptions = defu(
         nuxt.options.runtimeConfig.public.yandexMetrika,
         options,
@@ -60,10 +61,11 @@ const module = defineNuxtModule<Partial<MetrikaModuleParams>>({
       setScriptTag(moduleOptions, nuxt)
       setNoscriptTag(moduleOptions, nuxt)
       addPlugin({ src: resolve(__dirname, `./runtime/${isNuxt2() ? 'plugin-nuxt-2' : 'plugin'}`), mode: 'client' })
-    } else if (options.verbose === true) {
+    }
+    else if (options.verbose === true) {
       addPlugin({ src: resolve(__dirname, `./runtime/${isNuxt2() ? 'plugin-dev-nuxt-2' : 'plugin-dev'}`), mode: 'client' })
     }
-  }
+  },
 })
 
 function isValid(options: Partial<MetrikaModuleParams>): options is MetrikaModuleParams {
@@ -79,7 +81,8 @@ function setScriptTag(options: MetrikaModuleParams, nuxt: Nuxt) {
       hid: 'metrika',
       innerHTML: getScriptTag(options),
     })
-  } else {
+  }
+  else {
     nuxt.options.app.head.script = nuxt.options.app.head.script || []
     nuxt.options.app.head.script.unshift({
       id: 'metrika',
@@ -96,7 +99,8 @@ function setNoscriptTag(options: MetrikaModuleParams, nuxt: Nuxt) {
       nuxt.options.head.noscript.unshift({
         innerHTML: getNoscript(options.id),
       })
-    } else {
+    }
+    else {
       nuxt.options.app.head.noscript = nuxt.options.app.head.noscript || []
       nuxt.options.app.head.noscript.unshift({
         innerHTML: getNoscript(options.id),

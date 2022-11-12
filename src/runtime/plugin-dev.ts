@@ -1,5 +1,5 @@
-import { defineNuxtPlugin } from '#app'
 import consola from 'consola'
+import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((ctx) => {
   ctx.provide('metrika', {

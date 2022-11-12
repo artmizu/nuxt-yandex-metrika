@@ -10,6 +10,7 @@ specifiers:
   consola: ^2.15.3
   defu: ^6.1.0
   eslint: ^8.26.0
+  husky: ^8.0.2
   nuxt: ^3.0.0-rc.13
   playwright: ^1.27.1
   typescript: 4.8.4
@@ -27,6 +28,7 @@ devDependencies:
   '@nuxt/test-utils': 3.0.0-rc.13
   '@nuxtjs/eslint-config-typescript': 11.0.0_rmayb2veg2btbq6mbmnyivgasy
   eslint: 8.27.0
+  husky: 8.0.2
   nuxt: 3.0.0-rc.13_rmayb2veg2btbq6mbmnyivgasy
   playwright: 1.27.1
   typescript: 4.8.4
@@ -3880,6 +3882,12 @@ packages:
   /human-signals/3.0.1:
     resolution: {integrity: sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==}
     engines: {node: '>=12.20.0'}
+    dev: true
+
+  /husky/8.0.2:
+    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:
