@@ -1,8 +1,11 @@
 {
-  "name": "@artmizu/yandex-metrika-nuxt",
+  "name": "@artmizu/nuxt-yandex-metrika",
   "type": "module",
-  "version": "1.0.0",
+  "packageManager": "pnpm@7.15.0",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "require": "./dist/module.cjs",
