@@ -29,7 +29,12 @@ jobs:
       - run: pnpm install
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: pnpm prepack
+      - name: Prepare is needed, because it generate types
+        run: pnpm dev:prepare
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Let's build it
+        run: pnpm prepack
         if: ${{ steps.release.outputs.release_created }}
 
       - run: pnpm publish
