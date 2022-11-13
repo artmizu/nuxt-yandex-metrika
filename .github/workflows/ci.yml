@@ -67,7 +67,9 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --shamefully-hoist
+        run: |
+          pnpm install --shamefully-hoist
+          npx playwright install
 
       - name: Prepare is needed, because it generate types
         run: pnpm dev:prepare
