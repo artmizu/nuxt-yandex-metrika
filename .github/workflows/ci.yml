@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Prepare is needed, because it generate types
+        run: pnpm dev:prepare
+
       - name: Lint
         run: pnpm lint
 
@@ -42,6 +45,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Prepare is needed, because it generate types
+        run: pnpm dev:prepare
 
       - name: Typecheck
         run: pnpm typecheck
@@ -63,5 +69,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Typecheck
+      - name: Prepare is needed, because it generate types
+        run: pnpm dev:prepare
+
+      - name: Run tests
         run: pnpm vitest run
