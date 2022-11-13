@@ -45,6 +45,7 @@
     "nuxt": "^3.0.0-rc.13",
     "playwright": "^1.27.1",
     "typescript": "4.8.4",
+    "vite": "^3.2.3",
     "vitest": "^0.25.1"
   }
 }
