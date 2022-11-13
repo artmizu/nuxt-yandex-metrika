@@ -21,7 +21,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --shamefully-hoist
 
       - name: Prepare is needed, because it generate types
         run: pnpm dev:prepare
@@ -44,7 +44,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --shamefully-hoist
 
       - name: Prepare is needed, because it generate types
         run: pnpm dev:prepare
@@ -67,7 +67,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --shamefully-hoist
 
       - name: Prepare is needed, because it generate types
         run: pnpm dev:prepare

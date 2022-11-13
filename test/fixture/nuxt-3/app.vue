@@ -1,13 +1,14 @@
-<script setup>
-import { useNuxtApp } from '#app'
-
-const ctx = useNuxtApp()
-if (process.client)
-  ctx.$metrika.reachGoal('zzz')
-</script>
-
 <template>
   <div>
-    <bla-bla-bla />
+    <NuxtLink to="/">
+      To Index
+    </NuxtLink>
+    <NuxtLink id="a" to="/a">
+      To A
+    </NuxtLink>
+    <NuxtLink id="b" to="/b">
+      To B
+    </NuxtLink>
+    <NuxtPage />
   </div>
 </template>

@@ -1,7 +1,7 @@
 
 declare global {
   interface Window {
-    ym: (id: string, action: string, value: string) => void
+    ym: (id: string, action: string, value: string, opts?: { referer: string }) => void
   }
 }
 
