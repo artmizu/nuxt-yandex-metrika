@@ -72,5 +72,5 @@ jobs:
       - name: Prepare is needed, because it generate types
         run: pnpm dev:prepare
 
-      - name: Typecheck
+      - name: Run tests
         run: pnpm vitest run
