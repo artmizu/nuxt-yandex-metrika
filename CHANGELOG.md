@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/artmizu/nuxt-yandex-metrika/compare/v1.0.1...v1.0.2) (2022-11-13)
+
+
+### Bug Fixes
+
+* basic readme ([fc6afa0](https://github.com/artmizu/nuxt-yandex-metrika/commit/fc6afa018263be4c6c6b23201eed006e66be4334))
+
 ## [1.0.1](https://github.com/artmizu/nuxt-yandex-metrika/compare/v1.0.0...v1.0.1) (2022-11-13)
 
 
