@@ -12,7 +12,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  plugins: [
-
-  ],
 })
