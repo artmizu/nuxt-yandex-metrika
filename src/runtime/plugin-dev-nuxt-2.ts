@@ -1,6 +1,6 @@
 import consola from 'consola'
 
-export default (_: any, inject: any) => {
+export default (_: unknown, inject: any) => {
   inject('metrika', {
     reachGoal: (identifyer: string) => {
       consola.info(`[yandex.metrika] reach goal "${identifyer}" on dev`)

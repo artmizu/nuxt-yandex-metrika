@@ -13,25 +13,28 @@
 
 ### Nuxt 3
 Install package via a package manager:
-```
-npm i -D @artmizu/nuxt-yandex-metrika
+```bash
+# using npm
+npm install --save-dev @artmizu/nuxt-yandex-metrika
 
+# using yarm
 yarn add -D @artmizu/nuxt-yandex-metrika
 
-pnpm add -D@artmizu/nuxt-yandex-metrika
+# using pnpm
+pnpm add -D @artmizu/nuxt-yandex-metrika
 ```
 
 Add it to a modules section of your nuxt config:
-```
-{
+```js
+export default {
   modules: ['@artmizu/nuxt-yandex-metrika']
 }
 ```
 
 ## Nuxt 2
 Similarly install package and add it to a buildModules section of your nuxt config:
-```
-{
+```js
+export default {
   buildModules: ['@artmizu/nuxt-yandex-metrika']
 }
 ``` 
