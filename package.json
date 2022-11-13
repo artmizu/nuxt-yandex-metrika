@@ -11,6 +11,9 @@
     ".": {
       "require": "./dist/module.cjs",
       "import": "./dist/module.mjs"
+    },
+    "./nuxt2": {
+      "types": "./dist/runtime/global.d.ts"
     }
   },
   "main": "./dist/module.cjs",
