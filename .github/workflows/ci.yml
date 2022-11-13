@@ -63,5 +63,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Prepack is needed, because it generates types
+        run: pnpm prepack
+
       - name: Typecheck
         run: pnpm vitest run
