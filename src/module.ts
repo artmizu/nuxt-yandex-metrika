@@ -53,7 +53,7 @@ const module = defineNuxtModule<Partial<MetrikaModuleParams>>({
     const resolver = createResolver(import.meta.url)
     nuxt.options.build.transpile.push(await resolver.resolve('./runtime'))
 
-    if (true) {
+    if (!nuxt.options.dev && ['production', 'test'].includes(process.env.NODE_ENV!)) {
       if (!isValid(moduleOptions)) {
         consola.error('[yandex.metrika] module cannot be initialized, please specify ID')
         return
